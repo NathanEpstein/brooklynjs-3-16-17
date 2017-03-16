@@ -378,7 +378,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 </section>
   </div>
   <div class="slide hidden" id="slide-3">
-    <section class="slide-content"><h1 id="why-compile-to-js-">Why compile to JS?</h1>
+    <section class="slide-content"><h1 id="compiling-to-javascript">Compiling to JavaScript</h1>
 </section>
   </div>
   <div class="slide hidden" id="slide-4">
@@ -407,28 +407,18 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   <div class="slide hidden" id="slide-7">
     <section class="slide-content"><h3 id="aot-and-jit-compiling">AOT and JIT Compiling</h3>
 <ul>
-<li><p>In some languages, high level syntax is compiled to an (optimized) executable before runtime (ahead-of-time compiling).</p>
+<li><p>In some languages, high level syntax is compiled to a (possibly optimized) executable before runtime (ahead-of-time compiling).</p>
 </li>
-<li><p>Other languages (like JS) are JIT (just-in-time) compiled. This is a hybrid of interpretation and compilation (for heavily used pieces of code).</p>
+<li><p>Other languages (like JavaScript) are JIT (just-in-time) compiled. This is a hybrid of interpretation and compilation (for heavily used pieces of code).</p>
 </li>
 </ul>
 </section>
   </div>
   <div class="slide hidden" id="slide-8">
-    <section class="slide-content"><h3 id="compiling-to-js">Compiling to JS</h3>
-<ul>
-<li><p>Typically, people think of compiling as translation from high level programming languages to machine code.</p>
-</li>
-<li><p>We can also use it to produce JavaScript from other programming languages.</p>
-</li>
-</ul>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-9">
     <section class="slide-content"><h1 id="some-js-compilers">Some JS Compilers</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-10">
+  <div class="slide hidden" id="slide-9">
     <section class="slide-content"><h3 id="typescript">Typescript</h3>
 <table>
 <td><img src="./img/typescript.png"></td>
@@ -446,7 +436,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 </table></section>
   </div>
-  <div class="slide hidden" id="slide-11">
+  <div class="slide hidden" id="slide-10">
     <section class="slide-content"><h3 id="babel">Babel</h3>
 <table>
 <td>
@@ -465,7 +455,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 </td>
 </table></section>
   </div>
-  <div class="slide hidden" id="slide-12">
+  <div class="slide hidden" id="slide-11">
     <section class="slide-content"><h3 id="emscripten">Emscripten</h3>
 <table>
 <td>
@@ -484,7 +474,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 </td>
 </table></section>
   </div>
-  <div class="slide hidden" id="slide-13">
+  <div class="slide hidden" id="slide-12">
     <section class="slide-content"><h3 id="coffeescript">CoffeeScript</h3>
 <table>
 <td>
@@ -499,7 +489,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 </td>
 </table></section>
   </div>
-  <div class="slide hidden" id="slide-14">
+  <div class="slide hidden" id="slide-13">
     <section class="slide-content"><h3 id="clojurescript">ClojureScript</h3>
 <table>
 <td>
@@ -515,7 +505,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 </td>
 </table></section>
   </div>
-  <div class="slide hidden" id="slide-15">
+  <div class="slide hidden" id="slide-14">
     <section class="slide-content"><h3 id="other-functional-compilers">Other Functional Compilers</h3>
 <ul>
 <li><p>Scala.js compiles Scala to optimized JS.</p>
@@ -525,16 +515,16 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-16">
+  <div class="slide hidden" id="slide-15">
     <section class="slide-content"><h1 id="compiling-for-performance">Compiling for Performance</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-17">
+  <div class="slide hidden" id="slide-16">
     <section class="slide-content"><h3 id="js-performance">JS Performance</h3>
 <p>In some cases, we can use a compiler to generate more performant JavaScript then what we are able to produce with &quot;hand written&quot; JS.</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-18">
+  <div class="slide hidden" id="slide-17">
     <section class="slide-content"><h3 id="some-things-that-make-js-slow-">Some things that make JS &quot;slow&quot;</h3>
 <ul>
 <li>layout of data in physical memory</li>
@@ -544,7 +534,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-19">
+  <div class="slide hidden" id="slide-18">
     <section class="slide-content"><h3 id="memory-layout">Memory Layout</h3>
 <ul>
 <li><p>In a typed language, elements of an array / vector will typically be stored in contiguous memory.</p>
@@ -554,33 +544,33 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-20">
+  <div class="slide hidden" id="slide-19">
     <section class="slide-content"><h3 id="a-very-serious-accurate-representation-of-physical-memory">A Very Serious &amp; Accurate Representation of Physical Memory</h3>
 <p><img src="./img/array.png"></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-21">
+  <div class="slide hidden" id="slide-20">
     <section class="slide-content"><h3 id="ambiguous-functions">Ambiguous Functions</h3>
 <ul>
 <li>Functions with different argument types may have similar syntax but do very different things in physical memory (i.e. <code>let add = (a, b) =&gt; a + b;</code>).</li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-22">
+  <div class="slide hidden" id="slide-21">
     <section class="slide-content"><h3 id="garbage-collection">Garbage Collection</h3>
 <ul>
 <li>Heap memory is not manually managed; may be reclaimed at unpredictable / undesirable times.</li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-23">
+  <div class="slide hidden" id="slide-22">
     <section class="slide-content"><h3 id="unoptimized-code">Unoptimized Code</h3>
 <ul>
 <li>&quot;Hand written&quot; code may contain room for optimizations that a compiler can perform (i.e. unnecessary computations and intermediate values, result reuse, memory locality, etc).</li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-24">
+  <div class="slide hidden" id="slide-23">
     <section class="slide-content"><h3 id="emscripten">Emscripten</h3>
 <ul>
 <li><p>Allows us to compile LLVM-to-JS (C, C++, Rust).</p>
@@ -592,7 +582,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-25">
+  <div class="slide hidden" id="slide-24">
     <section class="slide-content"><h3 id="what-do-we-get-">What Do We Get?</h3>
 <ul>
 <li><p>Pre-emptive checks for type and linking errors.</p>
@@ -604,7 +594,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 </ul>
 </section>
   </div>
-  <div class="slide hidden author-slide" id="slide-26">
+  <div class="slide hidden author-slide" id="slide-25">
     <section class="slide-content"><div class="author">
   <h1 class="name">Nathan Epstein</h1>
     <h3 class="twitter">

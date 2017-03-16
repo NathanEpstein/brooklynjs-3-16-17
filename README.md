@@ -18,7 +18,7 @@ author:
 
 --
 
-# Why compile to JS?
+# Compiling to JavaScript
 
 --
 
@@ -44,17 +44,9 @@ author:
 
 ### AOT and JIT Compiling
 
-- In some languages, high level syntax is compiled to an (optimized) executable before runtime (ahead-of-time compiling).
+- In some languages, high level syntax is compiled to a (possibly optimized) executable before runtime (ahead-of-time compiling).
 
-- Other languages (like JS) are JIT (just-in-time) compiled. This is a hybrid of interpretation and compilation (for heavily used pieces of code).
-
---
-
-### Compiling to JS
-
-- Typically, people think of compiling as translation from high level programming languages to machine code.
-
-- We can also use it to produce JavaScript from other programming languages.
+- Other languages (like JavaScript) are JIT (just-in-time) compiled. This is a hybrid of interpretation and compilation (for heavily used pieces of code).
 
 --
 
